@@ -55,18 +55,9 @@ cover/
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
 # Flask stuff:
 instance/
 .webassets-cache
-
-# Scrapy stuff:
-.scrapy
 
 # Sphinx documentation
 docs/_build/
@@ -216,3 +207,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Linux KDE
+#   Files Linux KDE generates when editing the folder appearance
+*.directory
