@@ -2,6 +2,7 @@
 
 {% block head %} 
     <title> index idk </title>
+    <link href="{{url_for('static', filename='css/index.css')}}" rel="stylesheet">
 {% endblock %}
 
 {% block body %} 
@@ -9,7 +10,7 @@
         <div id="wrapper">
             <h1 id="pageTitle">Discord Dungeon Manager</h1>
 
-            <div id="buttonContainer">
+            <div id="centerButton">
                 <a href="discord"> <button class="btn btn-lg btn-outline-primary mb-2">Manage Discord</button> </a>
                 <a href="rpg"> <button class="btn btn-lg btn-outline-primary" action="/test">Manage RPG</button> </a>
             </div>
