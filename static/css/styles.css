@@ -6,6 +6,31 @@ body {
     background-color: rgb(16, 15, 26);
 }
 
+.fitContent {
+    width: fit-content;
+}
+
+.navButton {
+    border: 1px solid;
+    border-color: rgb(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.navButton:hover {
+    transition: 200ms;
+    border-color: rgb(255, 255, 255, 0.4);
+}
+
+.navFooter {
+    opacity: 70%;
+}
+
+.navFooter:hover {
+    transition: 200ms;
+    opacity: 100%;
+}
+
 #centerButton {
     display: flex;
     flex-direction: column;
@@ -21,6 +46,13 @@ body {
     width: fit-content;
     align-items: center;
     scrollbar-width: none;
+}
+
+#sidebar {
+    width: 200px !important;
+    height: 100%;
+    position: fixed;
+    margin-right: 200px;
 }
 
 #wrapper {
