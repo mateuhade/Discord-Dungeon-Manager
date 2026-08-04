@@ -1,63 +1,124 @@
+/* All CSS styles will be organized by alphabetical order and type.
+
+For differentiation purposes, classes and IDs made by me are named using camelCase, while 
+bootstrap classes use the kebab-case convention. 
+Additionally, self-made classes and IDs will have priority over bootstrap classes when it 
+comes to being modified. In the same way, IDs will have priority over classes*/
+
+
+/* TAGS / TAGS / TAGS / TAGS / TAGS / TAGS / TAGS / TAGS / TAGS */
 body { 
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(16, 15, 26);
+    display: grid;
+    grid-template-columns: auto 1fr;
 }
 
-.fitContent {
-    width: fit-content;
+i {
+    font-size: 18px;
 }
 
-.navButton {
-    border: 1px solid;
-    border-color: rgb(255, 255, 255, 0.2);
+/* SELF-MADE CLASSES / SELF-MADE CLASSES / SELF-MADE CLASSES */
+/* GENERAL */
+.flipped {
+    transform: scaleX(-1);
+}
+
+/* SIDEBAR */
+
+.collapsed hr{
+    width: 25px;
+    transition: 200ms;
+}
+.extended hr {
+    width: 100%;
+    transition: 200ms;
+}
+
+.collapsed .navButton{
+    opacity: 0.7;
+    transition: 200ms;
+}
+.collapsed .navButton:hover{
+    opacity: 1;
+    
+}
+
+.extended .navButton{
+    opacity: 0.8;
+    transition: 200ms;
+}
+.extended .navButton:hover{
+    opacity: 1;
+    background-color: #0000003F;
     border-radius: 5px;
-    margin-bottom: 5px;
 }
 
-.navButton:hover {
+.navButton{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 0.75em;
+}
+
+.navFooter{
+    position: absolute;
+    width: 184px;
+    bottom: 10px;
+}
+
+.navFooter a {
+    opacity: 0.7;
     transition: 200ms;
-    border-color: rgb(255, 255, 255, 0.4);
 }
-
-.navFooter {
-    opacity: 70%;
-}
-
-.navFooter:hover {
-    transition: 200ms;
+.navFooter a:hover {
     opacity: 100%;
 }
 
-#centerButton {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.navHeader {
+    height: 30px;
 }
 
-#mainContainer {
+.navHeader li{
     display: flex;
-    overflow: scroll;
-    flex-direction: column;
-    height: fit-content;
-    width: fit-content;
-    align-items: center;
-    scrollbar-width: none;
+    justify-content: flex-end;
 }
 
+
+/* SELF-MADE IDS / SELF-MADE IDS / SELF-MADE IDS */
+/* SIDEBAR */
 #sidebar {
-    width: 200px !important;
-    height: 100%;
-    position: fixed;
-    margin-right: 200px;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    position: sticky;
+    text-wrap: nowrap;
+    transition: 200ms;
 }
 
-#wrapper {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    place-content: center;
+#sidebar.collapsed {
+    width: 42px
 }
+
+#sidebar.extended {
+    width: 200px;
+}
+
+.btn#navToggleButton {
+    margin-left: auto;
+    color: aliceblue;
+    border-color: transparent;
+}
+
+.collapsed #navToggleButton {
+    position: absolute;
+    left: 5px;
+}
+
+
+/* BOOTSTRAP CLASSES / BOOTSTRAP CLASSES / BOOTSTRAP CLASSES*/
+/* SIDEBAR */

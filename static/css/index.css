@@ -1,3 +1,11 @@
 button {
     width: 210px;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    scrollbar-width: none;
+}
